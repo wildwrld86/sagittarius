@@ -27,12 +27,13 @@ This file exists so SuperGrok, Grok Bots (GB), free-tier Grok, ChatGPT, and othe
 | Agent / Tool              | Access level          | Allowed actions                                      | Forbidden / restricted                          |
 |---------------------------|-----------------------|------------------------------------------------------|-------------------------------------------------|
 | **Grok Bot (GB)**         | Read + research       | Read code, docs, and this file; propose small tests when activated | Autonomous coding, installs, deploys, spending |
-| **SuperGrok**             | Read + research       | Analysis, documentation drafts, planning             | Direct pushes without review, paid usage beyond limits |
+| **SuperGrok**             | Read + research       | Analysis, documentation drafts, planning             | Direct pushes without review; unsolicited API spend or long-running autonomous sessions |
 | **Free-tier Grok**        | Read                  | Answer questions about the public repo               | Writes, tool use that modifies anything         |
 | **ChatGPT**               | Read (if shared)      | Analysis and suggestions only                        | Writes, execution, or assuming ownership        |
 | **Other agents / bots**   | None by default       | —                                                    | Any action until explicitly granted             |
 
-Multiple Grok Bots exist. Until named and scoped here, treat every GB the same: research only, wait for activation.
+**Research** means analysis and proposals only — no writes and no tool execution that changes state.  
+All Grok Bots share the same default scope until individually named and scoped in this table: research only, wait for activation.
 
 ---
 
@@ -40,7 +41,7 @@ Multiple Grok Bots exist. Until named and scoped here, treat every GB the same: 
 
 1. Confirm the intended use case with Daniel.
 2. Inspect current upstream changes.
-3. Propose a small, bounded test with an explicit cost limit.
+3. Propose a small, bounded test with an explicit cost limit, and wait for explicit confirmation before any execution.
 4. Document the plan and any changes on a dedicated branch.
 5. Update this file (or GB_HANDOFF.md) with the new scope and expiry.
 
